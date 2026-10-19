@@ -138,6 +138,9 @@ code{font-family:var(--f-mono);font-size:.86em;background:var(--surface);padding
 .proj:hover .big{color:var(--accent)}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:8px;position:relative}
 .tags span{border:1px solid var(--line);border-radius:999px;padding:3px 10px;font:500 .8rem/1.4 var(--f-mono);background:var(--bg)}
+.proj.feature{grid-column:1/-1}
+.proj.feature p{max-width:72ch}
+.proj.feature h3{font-size:clamp(2.4rem,4.6vw,4rem)}
 @media (max-width:760px){.projects{grid-template-columns:1fr}}
 
 /* stack */
@@ -248,7 +251,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 
 <div class="marquee" aria-hidden="true">
   <div class="track" id="track">
-    <span>Next.js</span><i>✦</i><span>TypeScript</span><i>✦</i><span>Postgres RLS</span><i>✦</i><span>Supabase</span><i>✦</i><span>LTI 1.3</span><i>✦</i><span>Firebase</span><i>✦</i><span>pgvector</span><i>✦</i><span>n8n</span><i>✦</i><span>Electron</span><i>✦</i><span>Python</span><i>✦</i><span>Java</span><i>✦</i><span>LangChain</span><i>✦</i>
+    <span>PyTorch</span><i>✦</i><span>FPGA</span><i>✦</i><span>Next.js</span><i>✦</i><span>TypeScript</span><i>✦</i><span>Postgres RLS</span><i>✦</i><span>Supabase</span><i>✦</i><span>LTI 1.3</span><i>✦</i><span>Firebase</span><i>✦</i><span>pgvector</span><i>✦</i><span>n8n</span><i>✦</i><span>Electron</span><i>✦</i><span>Python</span><i>✦</i><span>Java</span><i>✦</i><span>LangChain</span><i>✦</i>
   </div>
 </div>
 
@@ -325,6 +328,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
       <p class="mono">Built on my own time</p>
     </div>
     <div class="projects">
+      <article class="proj feature reveal">
+        <div class="top mono"><span>Edge AI · FPGA · Capstone</span><span>2026</span></div>
+        <h3>Task-Aware Vision on PYNQ</h3>
+        <p>Object detection that understands what you are trying to do. Model 1 is a YOLO11n detector fine-tuned on 46 classroom object classes from Open Images. Model 2 is a CLIP-based semantic ranker that scores those detections against a natural-language task and picks the objects that matter for it. The selector is also written as a pipelined RTL module and checked against golden vectors with cocotb AXI-stream tests, and a local web dashboard shows each run.</p>
+        <div class="tags"><span>Python</span><span>PyTorch</span><span>YOLO11</span><span>CLIP</span><span>PYNQ FPGA</span><span>Verilog</span><span>cocotb</span></div>
+        <div class="proof plinks">
+          <a class="link mono" href="https://github.com/shubhgupta2005/Object-Detection-Using-PYNQ-BOARD-and-Semantic-Ranking-X-Analysis" target="_blank" rel="noopener">Source on GitHub ↗</a>
+        </div>
+        <span class="big" aria-hidden="true">FPGA</span>
+      </article>
       <article class="proj reveal">
         <div class="top mono"><span>E-commerce</span><span class="pill build"><i class="dot"></i>Building</span></div>
         <h3>GripNGear</h3>
